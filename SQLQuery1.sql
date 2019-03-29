@@ -9,11 +9,6 @@ CREATE TABLE [FirmaKomputerowa].[dbo].[Drukarki] (
 	cena int,
 ); 
 
-CREATE TABLE [FirmaKomputerowa].[dbo].[Produkty] (
-    producent nvarchar(20),
-	model nvarchar(20) PRIMARY KEY,
-	typ nvarchar(20),
-); 
 
 CREATE TABLE [FirmaKomputerowa].[dbo].[Laptop] (
     model nvarchar(20) PRIMARY KEY,
@@ -32,4 +27,13 @@ CREATE TABLE [FirmaKomputerowa].[dbo].[PC] (
 	cd int,
 	ekran int,
 	cena int,
+); 
+
+CREATE TABLE [FirmaKomputerowa].[dbo].[Produkty] (
+    producent nvarchar(20),
+	model nvarchar(20) PRIMARY KEY,
+	typ nvarchar(20),
+	FOREIGN KEY (model) REFERENCES Drukarki(model),
+	FOREIGN KEY (model) REFERENCES Laptop(model),
+	FOREIGN KEY (model) REFERENCES PC(model),
 ); 
