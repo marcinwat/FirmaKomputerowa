@@ -1,0 +1,15 @@
+C:\Users\TEMP.WML25.020\source\repos\SklepKomputerowy\SklepKomputerowy\bin\Debug\SklepKomputerowy.exe.config
+C:\Users\TEMP.WML25.020\source\repos\SklepKomputerowy\SklepKomputerowy\bin\Debug\SklepKomputerowy.exe
+C:\Users\TEMP.WML25.020\source\repos\SklepKomputerowy\SklepKomputerowy\bin\Debug\SklepKomputerowy.pdb
+C:\Users\TEMP.WML25.020\source\repos\SklepKomputerowy\SklepKomputerowy\bin\Debug\EntityFramework.dll
+C:\Users\TEMP.WML25.020\source\repos\SklepKomputerowy\SklepKomputerowy\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\TEMP.WML25.020\source\repos\SklepKomputerowy\SklepKomputerowy\bin\Debug\EntityFramework.xml
+C:\Users\TEMP.WML25.020\source\repos\SklepKomputerowy\SklepKomputerowy\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\TEMP.WML25.020\source\repos\SklepKomputerowy\SklepKomputerowy\obj\Debug\SklepKomputerowy.csprojAssemblyReference.cache
+C:\Users\TEMP.WML25.020\source\repos\SklepKomputerowy\SklepKomputerowy\obj\Debug\SklepKomputerowy.Form1.resources
+C:\Users\TEMP.WML25.020\source\repos\SklepKomputerowy\SklepKomputerowy\obj\Debug\SklepKomputerowy.Properties.Resources.resources
+C:\Users\TEMP.WML25.020\source\repos\SklepKomputerowy\SklepKomputerowy\obj\Debug\SklepKomputerowy.csproj.GenerateResource.cache
+C:\Users\TEMP.WML25.020\source\repos\SklepKomputerowy\SklepKomputerowy\obj\Debug\SklepKomputerowy.csproj.CoreCompileInputs.cache
+C:\Users\TEMP.WML25.020\source\repos\SklepKomputerowy\SklepKomputerowy\obj\Debug\SklepKomputerowy.csproj.CopyComplete
+C:\Users\TEMP.WML25.020\source\repos\SklepKomputerowy\SklepKomputerowy\obj\Debug\SklepKomputerowy.exe
+C:\Users\TEMP.WML25.020\source\repos\SklepKomputerowy\SklepKomputerowy\obj\Debug\SklepKomputerowy.pdb

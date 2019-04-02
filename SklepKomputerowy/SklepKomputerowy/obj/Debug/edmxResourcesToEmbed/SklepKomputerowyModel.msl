@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FirmaKomputerowaModelStoreContainer" CdmEntityContainer="firma_komputerowaEntities">
+    <EntitySetMapping Name="Drukarki">
+      <EntityTypeMapping TypeName="FirmaKomputerowaModel.Drukarki">
+        <MappingFragment StoreEntitySet="Drukarki">
+          <ScalarProperty Name="model" ColumnName="model" />
+          <ScalarProperty Name="kolor" ColumnName="kolor" />
+          <ScalarProperty Name="typ" ColumnName="typ" />
+          <ScalarProperty Name="cena" ColumnName="cena" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Laptopy">
+      <EntityTypeMapping TypeName="FirmaKomputerowaModel.Laptopy">
+        <MappingFragment StoreEntitySet="Laptopy">
+          <ScalarProperty Name="model" ColumnName="model" />
+          <ScalarProperty Name="procesor" ColumnName="procesor" />
+          <ScalarProperty Name="ram" ColumnName="ram" />
+          <ScalarProperty Name="hdd" ColumnName="hdd" />
+          <ScalarProperty Name="ekran" ColumnName="ekran" />
+          <ScalarProperty Name="cena" ColumnName="cena" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PC">
+      <EntityTypeMapping TypeName="FirmaKomputerowaModel.PC">
+        <MappingFragment StoreEntitySet="PC">
+          <ScalarProperty Name="model" ColumnName="model" />
+          <ScalarProperty Name="procesor" ColumnName="procesor" />
+          <ScalarProperty Name="ram" ColumnName="ram" />
+          <ScalarProperty Name="hdd" ColumnName="hdd" />
+          <ScalarProperty Name="cd" ColumnName="cd" />
+          <ScalarProperty Name="ekran" ColumnName="ekran" />
+          <ScalarProperty Name="cena" ColumnName="cena" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Produkty">
+      <EntityTypeMapping TypeName="FirmaKomputerowaModel.Produkty">
+        <MappingFragment StoreEntitySet="Produkty">
+          <ScalarProperty Name="producent" ColumnName="producent" />
+          <ScalarProperty Name="model" ColumnName="model" />
+          <ScalarProperty Name="typ" ColumnName="typ" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

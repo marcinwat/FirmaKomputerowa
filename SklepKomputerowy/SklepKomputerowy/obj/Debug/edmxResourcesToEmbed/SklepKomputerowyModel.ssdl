@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FirmaKomputerowaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Drukarki">
+    <Key>
+      <PropertyRef Name="model" />
+    </Key>
+    <Property Name="model" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="kolor" Type="bit" Nullable="false" />
+    <Property Name="typ" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="cena" Type="money" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Laptopy">
+    <Key>
+      <PropertyRef Name="model" />
+    </Key>
+    <Property Name="model" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="procesor" Type="int" Nullable="false" />
+    <Property Name="ram" Type="int" Nullable="false" />
+    <Property Name="hdd" Type="int" />
+    <Property Name="ekran" Type="int" Nullable="false" />
+    <Property Name="cena" Type="money" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PC">
+    <Key>
+      <PropertyRef Name="model" />
+    </Key>
+    <Property Name="model" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="procesor" Type="int" Nullable="false" />
+    <Property Name="ram" Type="int" Nullable="false" />
+    <Property Name="hdd" Type="int" />
+    <Property Name="cd" Type="int" />
+    <Property Name="ekran" Type="int" />
+    <Property Name="cena" Type="money" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Produkty">
+    <Key>
+      <PropertyRef Name="model" />
+    </Key>
+    <Property Name="producent" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="model" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="typ" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_ProduktyDrukarka">
+    <End Role="Produkty" Type="Self.Produkty" Multiplicity="1" />
+    <End Role="Drukarki" Type="Self.Drukarki" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Produkty">
+        <PropertyRef Name="model" />
+      </Principal>
+      <Dependent Role="Drukarki">
+        <PropertyRef Name="model" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProduktyLaptop">
+    <End Role="Produkty" Type="Self.Produkty" Multiplicity="1" />
+    <End Role="Laptopy" Type="Self.Laptopy" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Produkty">
+        <PropertyRef Name="model" />
+      </Principal>
+      <Dependent Role="Laptopy">
+        <PropertyRef Name="model" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProduktyPC">
+    <End Role="Produkty" Type="Self.Produkty" Multiplicity="1" />
+    <End Role="PC" Type="Self.PC" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Produkty">
+        <PropertyRef Name="model" />
+      </Principal>
+      <Dependent Role="PC">
+        <PropertyRef Name="model" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="FirmaKomputerowaModelStoreContainer">
+    <EntitySet Name="Drukarki" EntityType="Self.Drukarki" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Laptopy" EntityType="Self.Laptopy" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PC" EntityType="Self.PC" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Produkty" EntityType="Self.Produkty" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_ProduktyDrukarka" Association="Self.FK_ProduktyDrukarka">
+      <End Role="Produkty" EntitySet="Produkty" />
+      <End Role="Drukarki" EntitySet="Drukarki" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProduktyLaptop" Association="Self.FK_ProduktyLaptop">
+      <End Role="Produkty" EntitySet="Produkty" />
+      <End Role="Laptopy" EntitySet="Laptopy" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProduktyPC" Association="Self.FK_ProduktyPC">
+      <End Role="Produkty" EntitySet="Produkty" />
+      <End Role="PC" EntitySet="PC" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
