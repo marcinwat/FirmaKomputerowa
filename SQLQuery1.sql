@@ -4,7 +4,7 @@ create database firma_komputerowa;
 use firma_komputerowa;
 
 create table Produkty(
-	producent text not null,
+	producent nvarchar(50) not null,
 	model nvarchar(50) primary key not null,
 	typ nvarchar(50) not null check(typ in ('pc', 'laptop', 'drukarka'))
 	);
